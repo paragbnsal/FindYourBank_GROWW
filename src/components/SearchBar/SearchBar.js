@@ -5,7 +5,6 @@ const SearchBar = () => {
   const cities = ["Mumbai", "Delhi", "Kolkata", "Kherli", "Jaipur"];
 
   const [city, setCity] = useState("Mumbai");
-  const [bankName, setBankName] = useState("All Banks");
   const [banks, setBanks] = useState([]);
   const [filteredBanks, setFilteredBanks] = useState([]);
   const [bankNames, setBanknames] = useState([]);
@@ -32,7 +31,6 @@ const SearchBar = () => {
     setCity(event.target.value);
   };
   const bankNameSelectHandler = (event) => {
-    setBankName(event.target.value);
     if (event.target.value == "All Banks") setFilteredBanks(banks);
     else setFilteredBanks(banks.filter((item) => item.bank_name == event.target.value));
   };

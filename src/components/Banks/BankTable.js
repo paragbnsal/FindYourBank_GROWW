@@ -23,17 +23,7 @@ const BankTable = (props) => {
                 <td>
                   {item.branch}, {item.state}
                 </td>
-                <td>
-                  <Link
-                    to={{
-                      pathname: `/bank-details/${item.ifsc}`,
-                      state: { item },
-                    }}
-                    className="text-decoration-none"
-                  >
-                    View Details
-                  </Link>
-                </td>
+                <td><Link to={`/bank-details/${item.ifsc}`} className="text-decoration-none" state={item}>View Details</Link></td>
               </tr>
             );
           })}

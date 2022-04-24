@@ -2,8 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 
 const Bankitem = (props) => {
-  const location = useLocation();
-  const { item } = props.location.state;
+  const item = useLocation().state;
   console.log(item);
   return (
     <>
