@@ -17,13 +17,21 @@ const BankTable = (props) => {
         <tbody>
           {banks.map((item) => {
             return (
-              <tr>
+              <tr key={item.ifsc}>
                 <td>{item.ifsc}</td>
                 <td>{item.bank_name}</td>
                 <td>
                   {item.branch}, {item.state}
                 </td>
-                <td><Link to={`/bank-details/${item.ifsc}`} className="text-decoration-none" state={item}>View Details</Link></td>
+                <td>
+                  <Link
+                    to={`/bank-details/${item.ifsc}`}
+                    className="text-decoration-none"
+                    state={item}
+                  >
+                    View Details
+                  </Link>
+                </td>
               </tr>
             );
           })}

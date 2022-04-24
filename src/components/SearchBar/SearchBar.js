@@ -3,7 +3,7 @@ import BankTable from "../Banks/BankTable";
 import Loader from "../Loader";
 
 const SearchBar = () => {
-  const cities = ["Mumbai", "Delhi", "Kolkata", "Kherli", "Jaipur"];
+  const cities = ["Mumbai", "Delhi", "Kolkata", "Hyderabad", "Bengaluru"];
 
   const [loading, setLoading] = useState(true);
   const [city, setCity] = useState("Mumbai");
@@ -74,7 +74,7 @@ const SearchBar = () => {
             </select>
           )}
         </div>
-        {/* <button type="button" class="btn btn-primary" >
+        {/* <button type="button" className="btn btn-primary" >
           {" "}
           Select City{" "}
         </button> */}

@@ -7,10 +7,10 @@ import BankDetails from "./components/Banks/BankDetails";
 function App() {
   return (
     <>
-      <h1 className="text-center my-3">
+      <h2 className="text-center my-3">
         {" "}
         Groww Assignment - Find Your Bank 
-      </h1>
+      </h2>
       <Router>
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
