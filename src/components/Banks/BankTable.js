@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 const BankTable = (props) => {
   const { banks } = props;
   return (
-    <div className="text-center m-3">
-      <table className="table table-hover">
-        <thead>
+    <div className="text-center mx-5">
+      <table className="table table-striped table-hover">
+        <thead className="table-dark">
           <tr>
             <th>IFSC</th>
             <th>Bank Name</th>

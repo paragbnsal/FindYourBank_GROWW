@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import BankTable from "../Banks/BankTable";
+import Loader from "../Loader";
 
 const SearchBar = () => {
   const cities = ["Mumbai", "Delhi", "Kolkata", "Kherli", "Jaipur"];
 
+  const [loading, setLoading] = useState(true);
   const [city, setCity] = useState("Mumbai");
   const [banks, setBanks] = useState([]);
   const [filteredBanks, setFilteredBanks] = useState([]);
@@ -14,6 +16,7 @@ const SearchBar = () => {
     const response = await fetch(url, { cache: "force-cache" });
     const data = await response.json();
     setBanks(data);
+    setLoading(false)
     setFilteredBanks(data);
     findBankNames(data);
   };
@@ -76,6 +79,7 @@ const SearchBar = () => {
           Select City{" "}
         </button> */}
       </div>
+      {loading && <Loader />}
       {banks.length > 0 && <BankTable banks={filteredBanks} />}
     </>
   );
